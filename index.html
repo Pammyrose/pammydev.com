@@ -63,9 +63,13 @@
     .logo span { color: var(--primary); }
 
     .nav-links {
-      display: flex;
-      gap: 2.5rem;
-      list-style: none;
+display: flex !important;     /* always show links */
+  transform: none !important;   /* no sliding animation needed */
+  position: static;             /* normal flow */
+  background: none;
+  backdrop-filter: none;
+  flex-direction: row;
+  gap: 2.5rem;
     }
     .nav-links a {
       color: var(--white);
@@ -87,15 +91,7 @@
 
     /* Mobile Menu Button */
     .mobile-menu-btn {
-      display: none;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 34px;
-      height: 26px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      z-index: 1100;
+    display: none !important;
     }
     .mobile-menu-btn span {
       width: 100%;
@@ -587,11 +583,7 @@
     <div class="nav-container">
       <a href="#" class="logo">Pam's<span>WebSave</span></a>
 
-      <button class="mobile-menu-btn" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+
 
       <ul class="nav-links">
         <li><a href="#hero" class="active">Home</a></li>
@@ -745,7 +737,7 @@
   </div>
 </div>
 
-      <!-- ... other project cards unchanged ... -->
+   
     </div>
   </section>
 
