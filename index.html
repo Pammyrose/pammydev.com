@@ -63,13 +63,9 @@
     .logo span { color: var(--primary); }
 
     .nav-links {
-display: flex !important;     /* always show links */
-  transform: none !important;   /* no sliding animation needed */
-  position: static;             /* normal flow */
-  background: none;
-  backdrop-filter: none;
-  flex-direction: row;
-  gap: 2.5rem;
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
     }
     .nav-links a {
       color: var(--white);
@@ -91,7 +87,15 @@ display: flex !important;     /* always show links */
 
     /* Mobile Menu Button */
     .mobile-menu-btn {
-    display: none !important;
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 34px;
+      height: 26px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 1100;
     }
     .mobile-menu-btn span {
       width: 100%;
@@ -583,7 +587,11 @@ display: flex !important;     /* always show links */
     <div class="nav-container">
       <a href="#" class="logo">Pam's<span>WebSave</span></a>
 
-
+      <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
       <ul class="nav-links">
         <li><a href="#hero" class="active">Home</a></li>
